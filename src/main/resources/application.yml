@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: api-service
+  datasource:
+    url: jdbc:mysql://139.196.73.27:3306/sc?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&autoReconnect=true&rewriteBatchedStatements=true
+    username: ieasysmart
+    password: ISM2017Ewq
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  profiles:
+    active: development
+  redis:
+    host: 39.106.43.88
+    port: 6379
+    password: 36f718ee612435b3738926247d8b9b04fb518552
+  http:
+    multipart:
+      maxFileSize: 100Mb
+      maxRequestSize: 1000Mb
+
+management:
+  security:
+    enabled: false
+
+security:
+  basic:
+    enabled: false
+
+mybatis:
+  config-location: classpath:mybatis-config-new1.xml
+
+wechat:
+  app-id: wx2c6846667d3fd5bd
+  app-secret: 17123f8d7cc0b5220e69e87791ea9fe4
+  merchant-id:
+  api-key:
+
+qq:
+  app-id: 1106365954
+
+weibo:
+  app-key: 452487483
+
+sms:
+  app-key: 20175bd54e0707
+  secret: testapi@wifiabc.cn
+
+debug:
+  enabled: true
+
+storeconfig:
+  storepath: /Users/hgwang/Document/sc-api/data

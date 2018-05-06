@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: api-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/anywave?serverTimezone=Asia/Shanghai&autoReconnect=true&rewriteBatchedStatements=true
+    username: un_tjzy
+    password: taijizhiyuan123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: B9KXw>e3#ghJivBonu9W28b9
+  http:
+      multipart:
+        maxFileSize: 100Mb
+        maxRequestSize: 1000Mb
+
+management:
+  security:
+    enabled: true
+
+security:
+  user:
+    name: admin
+    password: anywave_123456
+  ignored: /channels/**,/events/**,/feedbacks/**,/homepage/**,/members/**,/newsletters/**,/verifications/**,/videos/**
+
+mybatis:
+  config-location: classpath:mybatis-config.xml
+
+wechat:
+  app-id: wx9c0b5913dd495352
+  app-secret: 85b11095fce334d95b68d69a688fd0ce
+  merchant-id: 1436405702
+  api-key: 37s8p5blqh3ae8na2mmj312ye2lffrhp
+
+debug:
+  enabled: false
